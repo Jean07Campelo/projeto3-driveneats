@@ -9,26 +9,29 @@
 
 body {
     background-color: #E5E5E5; 
-    margin: 92px 0 92px 19px;
+    margin: 122px 0 110px 10px;
 }
+
 
 /* CLASSES MAIS USADAS */
 .titulo-secao h1 {
     font-family: 'Righteous';
     color: #333333;
     font-size: 26px;
-    margin-top: 27px;
+    margin-top: 30px;
+    margin-left: 8px;
 }
+
 /*ESTABELECER MARGIN*/
 
 /* não esta mudando a largura*/
 .conteudo .opcao {
     width: 172px;
-    height: 216px;
     border-radius: 9px;
     background-color: #FFFFFF;
-    margin-right: 16px;
+    margin-right: 18px;
     margin-top: 18px;
+    padding: 18px 12px;
 }
 
 .opcao img {
@@ -43,12 +46,15 @@ body {
     font-weight: bold;
     font-size: 16px;
     color: #333333;
+    margin-top: 12px;
 }
 
 .opcao .descricao {
     font-family: 'Roboto';
     font-size: 15px;
     color: #A6A6A6;
+    margin-top: 10px;
+    line-height: 18px;
 }
 
 .opcao .valor {
@@ -57,8 +63,20 @@ body {
     color: #000000;
 }
 
+.conteudo .info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.conteudo .info ion-icon {
+    color: #32B72F;
+    font-size: 20px;
+}
 /* FIM CLASSES MAIS USADAS */
-.topo {
+
+.info-superior {
     background-color: #CF2B2B;
     width: 100%;
     height: 92px;
@@ -68,7 +86,7 @@ body {
     left: 0;
 }
 
-.topo h1 {
+.info-superior h1 {
     font-family: 'Righteous';
     font-size: 44px;
     color: #FFFFFF;
@@ -76,7 +94,7 @@ body {
     letter-spacing: -1.2px;
 }
 
-.topo h2 {
+.info-superior h2 {
     font-family: 'Roboto';
     font-size: 18px;
     color: #FFFFFF;
@@ -86,4 +104,54 @@ body {
 .conteudo {
     display: flex;
     overflow-x: scroll;
+    padding: 10px;
+}
+
+
+.info-inferior {
+    width: 100%;
+    height: 92px;
+    background-color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.info-inferior .escolhendo-pedido {
+    width: 86%;
+    height: 70%;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    display: none;
+}
+
+.info-inferior .fechar-pedido {
+    width: 86%;
+    height: 70%;
+    background-color: #32B72F;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.opcao:hover {
+    outline: 5px solid #32B72F;
 }

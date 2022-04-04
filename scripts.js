@@ -5,6 +5,11 @@ let valorBebida;
 let sobremesaSelecionada;
 let valorSobremesa;
 
+function tudoSelecionado () {
+    if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada !== undefined) {
+        document.querySelector(".info-inferior-fechar").classList.remove("esconder");
+    }
+}
 
 //PRATO PRINCIPAL
 function selecionarPrato (prato) {
@@ -13,7 +18,6 @@ function selecionarPrato (prato) {
     if (itemSelecionado !== null) {
         itemSelecionado.classList.remove("selecionado");
         itemSelecionado.querySelector(".icone-selecionado").classList.add("esconder");
-        
     }
     /*ADICIONA CLASSE SELECIONADO NO ELEMENTO CLICADO*/
     prato.classList.add("selecionado");
@@ -53,11 +57,5 @@ function selecionarSobremesa (sobremesa) {
 
     sobremesaSelecionada = document.querySelector(".pratos").querySelector(".selecionado").querySelector(".nome-item").innerHTML;
     valorSobremesa = document.querySelector(".pratos").querySelector(".selecionado").querySelector(".valor").innerHTML;
-}
-
-function tudoSelecionado () {
-    if (".pratos" && ".bebidas" && ".sobremesas" !== undefined) {
-        document.querySelector(".escolhendo-pedido").classList.add("esconder");
-    }
 }
 

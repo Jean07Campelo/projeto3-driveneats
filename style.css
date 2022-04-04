@@ -62,14 +62,9 @@ body {
     font-size: 16px;
     color: #000000;
     margin-top: 10px;
+    position: relative;
 }
 
-.conteudo .info {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    justify-content: space-between;
-}
 
 /* FIM CLASSES MAIS USADAS */
 
@@ -104,8 +99,8 @@ body {
     padding: 10px;
 }
 
-
-.info-inferior {
+/*ESCOLHENDO PEDIDO*/
+.info-inferior-escolhendo {
     width: 100%;
     height: 92px;
     background-color: #FFFFFF;
@@ -117,7 +112,7 @@ body {
     align-items: center;  
 }
 
-.info-inferior .escolhendo-pedido {
+.info-inferior-escolhendo .escolhendo-pedido {
     width: 86%;
     height: 70%;
     background-color: #CBCBCB;
@@ -130,10 +125,22 @@ body {
     font-size: 20px;
     color: #FFFFFF;
     text-align: center;
-    display: none;
 }
 
-.info-inferior .fechar-pedido {
+/*FECHAR PEDIDO*/
+.info-inferior-fechar {
+    width: 100%;
+    height: 92px;
+    background-color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.info-inferior-fechar .fechar-pedido {
     width: 86%;
     height: 70%;
     background-color: #32B72F;
@@ -154,8 +161,19 @@ body {
     outline: 5px solid #32B72F;
 }
 
-.conteudo .icone-selecionado {
+.icone-selecionado {
     color: #32B72F;
-    font-size: 20px;
+    font-size: 20px;    
 }
 
+.esconder {
+    display: none;
+}
+/*FIM SELECAO*/
+
+.opcao .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}

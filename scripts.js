@@ -5,6 +5,8 @@ let valorBebida;
 let sobremesaSelecionada;
 let valorSobremesa;
 
+let total = 0;
+
 function tudoSelecionado () {
     if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada !== undefined) {
         document.querySelector(".info-inferior-fechar").classList.remove("esconder");
@@ -55,17 +57,38 @@ function selecionarSobremesa (sobremesa) {
     sobremesa.classList.add("selecionado");
     sobremesa.querySelector(".icone-selecionado").classList.remove("esconder");
 
-    sobremesaSelecionada = document.querySelector(".sobremesa").querySelector(".selecionado").querySelector(".nome-item").innerHTML;
-    valorSobremesa = document.querySelector(".sobremesa").querySelector(".selecionado").querySelector(".valor").innerHTML;
+    sobremesaSelecionada = document.querySelector(".sobremesas").querySelector(".selecionado").querySelector(".nome-item").innerHTML;
+    valorSobremesa = document.querySelector(".sobremesas").querySelector(".selecionado").querySelector(".valor").innerHTML;
+}
+
+//VALOR TOTAL
+function valorTotal () {
+    //remove R$ e espaço após
+    valorPrato = valorPrato.replace("R$ ","");
+    valorBebida = valorBebida.replace("R$ ","");
+    valorSobremesa = valorSobremesa.replace("R$ ","");
+
+    /*substitui virgula por ponto*/
+    valorPrato = valorPrato.replace("," , ".");
+    valorBebida = valorBebida.replace("," , ".");
+    valorSobremesa = valorSobremesa.replace("," , ".");
+
+    //converte para number e soma
+    total = Number(valorPrato) + Number(valorBebida) + Number(valorSobremesa);
+    total.toFixed(2);
+
+    console.log(total);
+    console.log(typeof(total));
 }
 
 
+//MENSAGEM USUARIO
 function mensagemUsuario () {
     let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
      - Prato: ${pratoSelecionado}
      - Bebida: ${bebidaSelecionada}
      - Sobremesa: ${sobremesaSelecionada}
-     
-     Total: `);
+
+     Total: R$ ${total}`);
      window.open(`https://wa.me/5511974212660?text=${mensagem}`);
 }

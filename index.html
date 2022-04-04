@@ -10,7 +10,6 @@
 
 </head>
 <body>
-
     <div class="info-superior">
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
@@ -28,7 +27,7 @@
                 <div class="nome-item">Driven Burguer</div>
             <div class="descricao">Ideal para matar a fome durante os projetos!</div>
             <div class="info">
-                <div class="valor">R$ 2,33</div>
+                <div class="valor">R$ 10,33</div>
             <ion-icon class="icone-selecionado esconder" name="checkmark-circle-sharp"></ion-icon>
             </div>
             
@@ -198,12 +197,13 @@
 
         <!-- quanto 3 itens forem selecionados remover "esconder" -->
         <div class="info-inferior-fechar esconder">
-            <div class="fechar-pedido">
+            <div class="fechar-pedido" onclick="mensagemUsuario()">
                 <h1>Fechar pedido</h1>
             </div>
         </div>
         
 
+    </div>
     </div>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

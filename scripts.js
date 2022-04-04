@@ -39,8 +39,8 @@ function selecionarBebida (bebida) {
     bebida.classList.add("selecionado");
     bebida.querySelector(".icone-selecionado").classList.remove("esconder");
 
-    bebidaSelecionada = document.querySelector(".pratos").querySelector(".selecionado").querySelector(".nome-item").innerHTML;
-    valorBebida = document.querySelector(".pratos").querySelector(".selecionado").querySelector(".valor").innerHTML;
+    bebidaSelecionada = document.querySelector(".bebidas").querySelector(".selecionado").querySelector(".nome-item").innerHTML;
+    valorBebida = document.querySelector(".bebidas").querySelector(".selecionado").querySelector(".valor").innerHTML;
 }
 
 //SOBREMESA
@@ -55,7 +55,17 @@ function selecionarSobremesa (sobremesa) {
     sobremesa.classList.add("selecionado");
     sobremesa.querySelector(".icone-selecionado").classList.remove("esconder");
 
-    sobremesaSelecionada = document.querySelector(".pratos").querySelector(".selecionado").querySelector(".nome-item").innerHTML;
-    valorSobremesa = document.querySelector(".pratos").querySelector(".selecionado").querySelector(".valor").innerHTML;
+    sobremesaSelecionada = document.querySelector(".sobremesa").querySelector(".selecionado").querySelector(".nome-item").innerHTML;
+    valorSobremesa = document.querySelector(".sobremesa").querySelector(".selecionado").querySelector(".valor").innerHTML;
 }
 
+
+function mensagemUsuario () {
+    let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+     - Prato: ${pratoSelecionado}
+     - Bebida: ${bebidaSelecionada}
+     - Sobremesa: ${sobremesaSelecionada}
+     
+     Total: `);
+     window.open(`https://wa.me/5511974212660?text=${mensagem}`);
+}
